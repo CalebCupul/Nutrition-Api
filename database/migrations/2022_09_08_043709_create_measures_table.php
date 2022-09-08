@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMeasurementsTable extends Migration
+class CreateMeasuresTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreateMeasurementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('measurements', function (Blueprint $table) {
+        Schema::create('measures', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('height');
+            $table->string('weight');
+            $table->string('muscle');
+            $table->string('bodyfat');
+            $table->string('waist');
+            $table->string('water');
         });
     }
 
@@ -26,6 +32,6 @@ class CreateMeasurementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('measurements');
+        Schema::dropIfExists('measures');
     }
 }

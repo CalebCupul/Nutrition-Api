@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Measurement;
-use App\Http\Requests\StoreMeasurementRequest;
-use App\Http\Requests\UpdateMeasurementRequest;
+use App\Models\Measure;
+use App\Http\Requests\StoreMeasureRequest;
+use App\Http\Requests\UpdateMeasureRequest;
 
-class MeasurementController extends Controller
+class MeasureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class MeasurementController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreMeasurementRequest  $request
+     * @param  \App\Http\Requests\StoreMeasureRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreMeasurementRequest $request)
+    public function store(StoreMeasureRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class MeasurementController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Measurement  $measurement
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function show(Measurement $measurement)
+    public function show(Measure $measure)
     {
         //
     }
@@ -53,10 +53,10 @@ class MeasurementController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Measurement  $measurement
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function edit(Measurement $measurement)
+    public function edit(Measure $measure)
     {
         //
     }
@@ -64,11 +64,11 @@ class MeasurementController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateMeasurementRequest  $request
-     * @param  \App\Models\Measurement  $measurement
+     * @param  \App\Http\Requests\UpdateMeasureRequest  $request
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateMeasurementRequest $request, Measurement $measurement)
+    public function update(UpdateMeasureRequest $request, Measure $measure)
     {
         //
     }
@@ -76,10 +76,10 @@ class MeasurementController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Measurement  $measurement
+     * @param  \App\Models\Measure  $measure
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Measurement $measurement)
+    public function destroy(Measure $measure)
     {
         //
     }

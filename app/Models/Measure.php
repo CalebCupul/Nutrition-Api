@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Measurement extends Model
+class Measure extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Measurement extends Model
         'weight',
         'muscle',
         'bodyfat',
-        'water',
         'waist',
+        'water'
     ];
 }
