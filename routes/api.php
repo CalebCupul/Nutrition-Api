@@ -23,7 +23,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/product', function () {
         return 'productsss';
-    });
+    })->middleware('ability:superAdmin');
     Route::post('/logout', [AuthController::class, 'logout']);
 
 });
