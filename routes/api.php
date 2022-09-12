@@ -16,14 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/user/create', [UserController::class, 'create']);
 Route::post('/login', [AuthController::class, 'login']);
 
 // Protected routes
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/product', function () {
         return 'productsss';
-    })->middleware('ability:superAdmin');
+    });
+    Route::post('/users/store', [UserController::class, 'store'])->middleware('ability:superAdmin');
+    Route::delete('/users/{user}', [UserController::class, 'destroy']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
 });
